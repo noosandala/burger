@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	/* font-family: 'Roboto', sans-serif; */
+  }
+  *, *:before, *:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+  }
+  :focus, :active{outline: none;}
+  a:focus, a:active{outline: none;}
+  
+  nav,footer,header,aside{display: block;}
+  
+  html, body{
+	height: 100%;
+	width: 100%;
+	font-style: 100%;
+	line-height: 1;
+	font-style: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+  }
+  
+  input, button, textarea{font-family: inherit;}
+  
+  input::-ms-clear{display:none;}
+  button{cursor: pointer;}
+  button::-moz-focus-inner{padding: 0;border: 0;}
+  a, a:visited{text-decoration: none;}
+  a:hover{text-decoration: none;}
+  ul li{list-style-type: none;}
+  img{vertical-align: top;}
+  
+  h1,h2, h3, h4, h5, h6{
+		 font-style: inherit; 
+		 font-weight: 400;
+	}
+	main{
+		 flex: 1 1 auto;
+	}
+	body{
+		height: 100%;
+		font-family: 'Inter';
+		line-height: 1;
+		font-size: 14px;
+		color: #243e63;
+	}   
+/* ///////////////////////////////////////////////////////////// */
+.wrapper{
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+[class*="__container"]{
+	max-width: 1200px;
+	margin: 0px auto;
+	padding: 0px 15px ;   
+}
+
+
+@media (max-width:1087px){
+	[class*="__container"]{
+		 max-width: 970px;
+	}
+}
+/* TABLET */
+@media (max-width:991.98px){
+	[class*="__container"]{
+		 max-width: 750px;
+
+	}
+}
+/* MOBILE */
+@media (max-width:767.98px){
+	[class*="__container"]{
+		 max-width: none;
+	}
+}
+/* MOBILE SMALL */
+@media (max-width:479.98px){
+
+}
+
+/* 
+
+header
+
+*/
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+}
+.header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #5e56ce;
+	z-index: 2;
+}
+.header__container {
+}
+.header__body {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	align-items: center;
+}
+.header__logo {
+	display: flex;
+	align-items: center;
+	z-index: 3;	
+}
+.logo__img {
+	width: 16%;
+}
+.header__burger {
+	display: none;
+}
+.header__menu {
+}
+.header__list {
+	display: flex;
+	position: relative;
+	z-index: 2;
+}
+.header__list li{
+	margin: 0px 0px 0px 20px;
+}
+.header__item {
+}
+.header__link {
+	text-transform: uppercase;
+	font-size: 18px;
+	color: #000;
+}
+@media (max-width:991.98px){
+	body.lock{
+		overflow: hidden;
+	}
+	.logo__img {
+		width: 10%;
+	}
+	.header__body {
+		height: 50px;
+		
+	}
+	.header__burger {
+		display: flex;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		z-index: 3;
+	}
+	.header__burger span{
+		background-color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		top: 9px;
+		transition: all 0.3s ease 0s;
+	}
+	.header__burger::before,
+	.header__burger::after{
+		content: '';
+		background-color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		transition: all 0.3s ease 0s;
+	}
+	.header__burger::before{
+		top: 0;
+	}
+	.header__burger::after{
+	bottom: 0;	
+	}
+	.header__burger.active span{
+		transform: scale(0);
+	}
+	.header__burger.active::before{
+		transform: rotate(45deg);
+		top: 9px;
+	}
+	.header__burger.active::after{
+		transform: rotate(-45deg);
+		bottom: 9px;
+	}
+	.header__menu {
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #243e63;
+		padding:70px 10px 0px 10px;
+		transition: all 0.3s ease 0s;
+	}
+	.header__menu.active {
+		top: -0;
+		
+	}
+	.header__menu {
+		overflow: auto;
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #243e63;
+		padding:70px 10px 0px 10px;
+	}
+	.header__list {
+		display: block;
+	}
+	.header__list li{
+		margin: 0px 0px 20px 0px;
+	}
+}
+
+.menu__links-anchor {
+}
+.btn {
+}
+
+
+
+
+/*  */
+.main {
+}
+.content {
+	padding: 100px 0px 0px 0px;
+}
+.content__container {
+}
+
